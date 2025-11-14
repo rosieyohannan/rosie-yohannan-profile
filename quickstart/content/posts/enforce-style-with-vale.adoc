@@ -1,0 +1,121 @@
+---
+title: "Enforce Style With Vale"
+date: 2025-11-04T10:04:28Z
+draft: false
+show_reading_time: true
+---
+= Enforcing our style with Vale
+
+A style guide is a great tool to help maintain consistency in across a content collection. The only problem with the "static" style guide as a reference is getting people to read it, remember what's in it, and actually apply it to their writing. I am very familiar with the documentation style guide at CircleCI because I wrote it! But Still I have times where I need to go and check something specific. If I can't have that content at the end of my fingertips I can't expect others to either.
+
+When we create documentation for a product or process we often decide to present it in various forma to catch all audiences, and hopefully give people what they need at any point in their journey. We want to give people the information they need at the point they need it.
+
+Vale is a brilliant tool for surfacing style guide help and information at the point of writing, or if not quite there, the point of building the content. With Vale you can set up rules to catch style issues with warnings and errors, and also create rules that give advice. Vale can be run in your terminal, in your IDE (depending on which one you're using), or in your CI/CD pipelines. I'm going to show you how we got going with Vale, how it's helped, and what doesn't work so well for us.
+
+
+== Why Automate Style Checking? (200-250 words)
+
+- **Consistency at scale**: Multiple writers, consistent voice
+- **Focus on content, not commas**: Reviewers can focus on technical accuracy
+- **Onboarding efficiency**: New team members follow established patterns automatically
+- **Brand voice protection**: Maintain professional standards across all docs
+
+== Vale: The Right Tool for the Job (150-200 words)
+
+- Why Vale over alternatives (Grammarly, manual reviews)
+- Syntax-aware prose linting (understands code blocks, frontmatter)
+- Extensible rule system
+- Active community and pre-built style guides
+
+== Implementation: CircleCI + Vale Orb (300-400 words)
+
+=== Quick Setup
+
+[source,yaml]
+----
+version: '2.1'
+orbs:
+  vale: circleci/vale@1.2.0
+workflows:
+  docs-check:
+    jobs:
+      - vale/lint
+----
+
+=== Configuration Strategy
+
+- Start with established style guides (show your `.vale.ini`)
+- Layer approach: Vale core → Readability → Custom rules
+- Smart file targeting with glob patterns
+
+=== Key Configuration Decisions
+
+- `MinAlertLevel`: Start with 'suggestion', tighten to 'warning'
+- Modified-files-only strategy for large repos
+- Vocabulary management for technical terms
+
+== Real-World Refinements (250-300 words)
+
+=== Rules That Actually Help
+
+- Sentence length limits (your 30-word rule)
+- Consistent terminology (API vs api)
+- Accessibility improvements (avoid "click here")
+
+=== Rules We Had to Tune
+
+- Show examples of overly strict rules
+- False positives with technical content
+- Balancing automation vs. human judgment
+
+=== Custom Rules for Our Voice
+
+- Brief example of a custom rule you created
+- How you borrowed from other style guides (Openly, circleci-docs)
+
+== What's Not Perfect (100-150 words)
+
+- Context awareness limitations
+- Technical jargon challenges
+- When to override the linter
+- Performance considerations for large doc sets
+
+== Results & Recommendations (150-200 words)
+
+- Quantify improvements (consistency scores, review time reduction)
+- Implementation tips:
+  - Start permissive, gradually tighten
+  - Invest time in vocabulary curation
+  - Regular rule review sessions
+- When this approach works best
+
+== Conclusion (50-75 words)
+
+- Reinforce the core benefit: automated consistency
+- Call to action: Try the CircleCI Vale orb
+
+---
+
+== Writing Tips for Maximum Engagement:
+
+=== Keep it scannable:
+
+- Use code snippets as visual breaks
+- Bold key concepts
+- Short paragraphs (3-4 sentences max)
+
+=== Make it practical:
+
+- Include copy-pasteable configuration examples
+- Show before/after examples of style improvements
+- Link to your actual rules repository
+
+=== Add personality:
+
+- Share a specific "aha moment" when Vale caught something important
+- Include a brief story about your team's style guide evolution
+- Use conversational transitions
+
+**Target length: 1,200-1,500 words**
+
+This keeps it substantial enough to be authoritative while remaining digestible for busy developers and technical writers.

@@ -1,0 +1,111 @@
+/* Custom styles for Rosie's blog */
+
+/* Change the main header title color from light-silver to near-black */
+header h1 {
+  color: #00449E !important; /* near-black */
+  font-weight: 700 !important;
+}
+
+/* Also change the site title link in the nav */
+header nav a[href="/"] {
+  color: #00449E !important; /* near-black */
+}
+
+/* Change navigation links (like Posts) color */
+header nav a {
+  color: #00449E !important;
+}
+
+/* Change social icons color */
+.ananke-socials a,
+.ananke-socials svg {
+  fill: #00449E !important;
+  color: #00449E !important;
+}
+
+/* Change author and date color */
+header p,
+header .f6 {
+  color: #00449E !important;
+}
+
+/* Change post preview text on homepage */
+main article p,
+main article .post-summary,
+main article .nested-copy-line-height {
+  color: #00449E !important;
+}
+
+/* Change Posts page title and other page titles */
+main h1 {
+  color: #00449E !important;
+}
+
+/* Change aside section titles (like "Posts" on homepage) */
+aside.instapaper_ignoref {
+  color: #00449E !important;
+}
+
+/* Style code blocks */
+pre {
+  background-color: #f5f5f5 !important; /* light gray background */
+  border-radius: 12px !important;
+  padding: 1em !important;
+}
+
+pre code {
+  background-color: transparent !important; /* Remove background from code inside pre */
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Remove background from inline code */
+p code,
+li code {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Main page background color */
+body {
+  background-color: #FFA3D7 !important; /* light-pink */
+}
+
+/* Add wavy bottom edge to header */
+header > div.bg-light-green {
+  position: relative;
+  padding-bottom: 1.5rem !important; /* Add space for the wave */
+}
+
+header > div.bg-light-green::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,10 Q25,0 50,10 T100,10 L100,20 L0,20 Z' fill='%23c7f0d4'/%3E%3C/svg%3E");
+  background-size: 100px 30px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  transform: translateY(100%) scaleY(-1);
+}
+
+/* Style the Read More button */
+a.bg-light-gray[href*="/posts/"] {
+  background-color: #c7f0d4 !important; /* light-green */
+  color: #333333 !important;
+  border: 2px solid #333333 !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+a.bg-light-gray[href*="/posts/"]:hover {
+  background-color: #333333 !important;
+  color: #c7f0d4 !important;
+  border-color: #333333 !important;
+}

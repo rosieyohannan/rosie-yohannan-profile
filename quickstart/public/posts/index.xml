@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on rosie yohannan&#39;s profile and blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on rosie yohannan&#39;s profile and blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Nov 2025 10:04:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enforce Style With Vale</title>
+      <link>http://localhost:1313/posts/enforce-style-with-vale/</link>
+      <pubDate>Tue, 04 Nov 2025 10:04:28 +0000</pubDate>
+      <guid>http://localhost:1313/posts/enforce-style-with-vale/</guid>
+      <description>&lt;div id=&#34;preamble&#34;&gt;&#xA;&lt;div class=&#34;sectionbody&#34;&gt;&#xA;&lt;div class=&#34;paragraph&#34;&gt;&#xA;&lt;p&gt;A style guide is a great tool to help maintain consistency in across a content collection. The only problem with the &amp;#34;static&amp;#34; style guide as a reference is getting people to read it, remember what’s in it, and actually apply it to their writing. I am very familiar with the documentation style guide at CircleCI because I wrote it! But Still I have times where I need to go and check something specific. If I can’t have that content at the end of my fingertips I can’t expect others to either.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
